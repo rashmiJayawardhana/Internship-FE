@@ -1,0 +1,481 @@
+body {
+    margin: 0;
+    font-family: "DM Sans", serif;
+    background-color: #ffffff;
+    color: #1e1e1e;
+  }
+  main {
+    max-width: 1350px;
+    margin: 0 auto;
+  }
+  .hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  #left, #right {
+    width: 30%;
+  }
+  
+  .hero-text {
+    width: 35%;
+    margin: 2% 6%;
+  }
+  
+  .hero-text h1 {
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #000743;
+  }
+  
+  .hero-text p {
+    font-size: 18px;
+    color: #000743;
+    margin-bottom: 30px;
+  }
+  
+  .floating-logos {
+    display: grid;
+    width: 100vw;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-columns: 30% 30% 30%;
+  }
+  #left .row-one {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  #left .row-two {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  #left .row-three {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  #left .row-four {
+    grid-column: 3;
+    grid-row: 3;
+  }
+  #left .row-five {
+    grid-column: 2;
+    grid-row: 4;
+  }
+  #right .row-one {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  #right .row-two {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  #right .row-three {
+    grid-column: 2;
+    grid-row: 3;
+  }
+  #right .row-four {
+    grid-column: 3;
+    grid-row: 3;
+  }
+  #right .row-five {
+    grid-column: 3;
+    grid-row: 4;
+  }
+  .logo-box {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .red-button, .journey-button {
+    display: flex;
+    padding: 12px 18px;
+    background-color: #ff3366;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    justify-content: center;
+    width: fit-content;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
+  }
+  
+  .red-button:hover {
+    background-color: #e62e5d;
+  }
+  
+  .spacer {
+    height: 20vh;
+    width: 100%;
+  }
+  
+  .ai-section {
+    background: linear-gradient(150deg, rgba(177, 66, 175, 1) 0%, rgba(107, 16, 101, 1) 32%);
+    color: white;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 5%;
+    height: 60vh;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .ai-bg, .grid-bg {
+    position: absolute;
+    top: -47%;
+    z-index: 0;
+  }
+  
+  .ai-bg {
+    left: -18%;
+  }
+  
+  .grid-bg {
+    left: 38%;
+  }
+  
+  .ai-main-text {
+    max-width: 60%;
+  }
+  
+  .ai-main-text h1 {
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+  
+  .guide-button {
+    display: flex;
+    margin-top: 2px;
+    padding: 12px 24px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    width: fit-content;
+    transition: all 0.3s ease-in-out;
+    z-index: 100;
+  }
+  
+  .guide-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .image-container {
+    position: relative;
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .tab-image {
+    min-width: 300px;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 50;
+  }
+  
+  .rating-section {
+    display: flex;
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 50px;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10%;
+    background-size: cover;
+    background-position-x: 0%;
+    z-index: 10;
+  }
+  
+  .bg-wave {
+    position: absolute;
+    top: -5%;
+    left: -35%;
+    z-index: 1;
+  }
+  
+  .rating-detail {
+    display: inline-block;
+    padding: 20px;
+    max-width: 600px;
+    text-align: left;
+  }
+  
+  .rating-detail h1 {
+    font-size: 60px;
+    color: #000743;
+    line-height: 60px;
+  }
+  
+  .rating-detail p {
+    font-size: 20px;
+    color: #000743;
+  }
+  
+  .journey-section {
+    background: #000743;
+    text-align: center;
+    padding: 50px 5%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .main-text {
+    padding: 0 25%;
+    z-index: 10;
+  }
+  
+  .journey-section h1 {
+    color: white;
+    font-size: 80px;
+    line-height: 80px;
+  }
+  
+  .journey-bg {
+    position: absolute;
+    top: -260%;
+    left: -2%;
+    z-index: 0;
+  }
+  
+  .grid-one {
+    position: absolute;
+    top: -57%;
+    left: 66%;
+    z-index: 1000;
+  }
+  
+  .grid-two {
+    position: absolute;
+    top: -10%;
+    left: -40%;
+    z-index: 10;
+  }
+  
+  /* Responsive Design */
+  
+  /* Tablets and small desktops */
+  @media (max-width: 1024px) {
+    .hero-text h1 {
+      font-size: 40px;
+    }
+  
+    .hero-text p {
+      font-size: 14px;
+    }
+  
+    .floating-logos {
+      grid-template-columns: 30% 30% 30%;
+      grid-template-rows: auto;
+    }
+    .logo-box {
+      width: 80px;
+      height: 80px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .ai-main-text h1 {
+      font-size: 40px;
+    }
+  
+    .tab-image {
+      min-width: 150px;
+    }
+  
+    .rating-detail h1 {
+      font-size: 45px;
+    }
+  
+    .rating-detail p {
+      font-size: 18px;
+    }
+  
+    .journey-section h1 {
+      font-size: 60px;
+    }
+  }
+  
+  /* Mobile devices */
+  @media (max-width: 768px) {
+    .hero-section {
+      flex-direction: column;
+      height: auto;
+      text-align: center;
+      padding: 20px;
+    }
+  
+    #left, #right {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    .hero-text {
+      width: 100%;
+      margin: 20px 0;
+    }
+  
+    .hero-text h1 {
+      font-size: 40px;
+    }
+  
+    .hero-text p {
+      font-size: 16px;
+    }
+  
+    .floating-logos {
+      display: flex;
+      gap: 35px;
+    }
+  
+    .logo-box {
+      width: 80px;
+      height: 80px;
+    }
+    .image-container {
+      display: none;
+    }
+    .ai-bg, .grid-bg {
+      top: 77%;
+      z-index: 1;
+    }
+    
+    .ai-bg {
+      left: -8%;
+    }
+    
+    .grid-bg {
+      left: 38%;
+    }
+    .ai-section {
+      flex-direction: column;
+      height: auto;
+      padding: 30px 1%;
+      text-align: center;
+    }
+  
+    .ai-main-text h1 {
+      font-size: 35px;
+      width: 100%;
+    }
+    .guide-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 89%;
+    }
+  
+    .image-container {
+      margin-top: 20px;
+    }
+  
+    .tab-image {
+      min-width: 200px;
+    }
+    .slider-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-right: 0;
+    }
+    .spacer {
+      display: none;
+    }
+    .rating-section {
+      flex-direction: column;
+      height: auto;
+      padding: 30px 10%;
+    }
+  
+    .rating-detail h1 {
+      font-size: 35px;
+    }
+  
+    .rating-detail p {
+      font-size: 16px;
+    }
+  
+    .journey-section {
+      height: auto;
+      padding: 40px 5%;
+    }
+  
+    .journey-section h1 {
+      font-size: 50px;
+    }
+  }
+  
+  /* Small mobile devices */
+  @media (max-width: 544px) {
+    .hero-text h1 {
+      font-size: 30px;
+    }
+  
+    .hero-text p {
+      font-size: 14px;
+    }
+    .floating-logos {
+      display: none;
+    }
+    .ai-main-text h1 {
+      font-size: 28px;
+    }
+  
+    .tab-image {
+      min-width: 150px;
+    }
+  
+    .rating-detail h1 {
+      font-size: 28px;
+    }
+  
+    .rating-detail p {
+      font-size: 14px;
+    }
+  
+    .journey-section h1 {
+      font-size: 40px;
+    }
+  
+    .red-button {
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+  
+  }
