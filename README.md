@@ -142,4 +142,4 @@ The site is deployed on Vercel for easy access.
    ```
    Follow the prompts to deploy. The live URL will be provided after deployment.
 
-**Live URL:** [https://eight25-internship-assessment.vercel.app/](https://eight25-internship-assessment.vercel.app/)
+**Live URL:** [https://internship-assignment-rashmi-jayawardhana.vercel.app/](https://internship-assignment-rashmi-jayawardhana.vercel.app/)
