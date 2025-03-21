@@ -1,0 +1,57 @@
+Summary of Work:
+- Implemented four sections from the provided Figma design:
+  1. Hero Section: Features floating logos on the left and right with centered text and a call-to-action button.
+  2. AI Section: Includes text with a button and overlapping images, styled with a gradient background.
+  3. Rating Section: Displays a slider with text and a background wave image.
+  4. Journey Section: A call-to-action section with centered text and background images.
+- Used HTML for structure, ensuring clean and semantic markup with proper alt attributes for accessibility.
+- Styled the website using CSS (styles.css), focusing on accuracy in replicating the Figma design, including fonts (DM Sans), colors, spacing, and responsive behavior for tablets, mobile devices, and small screens.
+- Added JavaScript (script.js) to implement a fade-in animation for sections using the Intersection Observer API.
+- Created a Dockerfile to set up an Nginx container:
+  - Exposes port 80 in the container and maps it to port 3000 on the host.
+  - Configured a volume to sync the website’s public files (run command: docker run -d -p 3000:80 -v $(pwd):/usr/share/nginx/html eight25-internship).
+- Provided an Nginx configuration (nginx.conf) for the domain http://eight25-internship-assessment.test.
+- Included virtual host configurations for both Apache and Nginx in this summary.
+
+Live Version:
+- The site can be viewed locally by running the Docker container: docker run -d -p 3000:80 -v $(pwd):/usr/share/nginx/html eight25-internship
+- Access at: http://localhost:3000
+- (Optional: If deployed, include the live URL here, e.g., https://your-site-name.netlify.app)
+
+Virtual Host Configurations (Windows):
+
+Apache Configuration (C:\Apache24\conf\extra\httpd-vhosts.conf):
+<VirtualHost *:80>
+    ServerName eight25-internship-assessment.test
+    ServerAlias www.eight25-internship-assessment.test
+    DocumentRoot "C:/webroot/eight25-internship-assessment"
+    <Directory "C:/webroot/eight25-internship-assessment">
+        Options -Indexes +FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+    ErrorLog "C:/Apache24/logs/eight25-error.log"
+    CustomLog "C:/Apache24/logs/eight25-access.log" combined
+</VirtualHost>
+
+Nginx Configuration (C:\nginx\conf\nginx.conf):
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+    server {
+        listen       80;
+        server_name  eight25-internship-assessment.test;
+        location / {
+            root   C:/webroot/eight25-internship-assessment;
+            index  index.html index.htm;
+            try_files $uri $uri/ /index.html;
+        }
+        error_log  C:/nginx/logs/eight25-error.log;
+        access_log C:/nginx/logs/eight25-access.log;
+    }
+}
+
+To test locally on Windows, add to C:\Windows\System32\drivers\etc\hosts (run Notepad as Administrator):
+127.0.0.1 eight25-internship-assessment.test
